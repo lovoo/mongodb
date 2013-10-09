@@ -279,7 +279,8 @@ class Database
      */
     public function getMongoDB()
     {
-        return $this->connection->getMongo()->selectDB($this->name);
+        $mongo = $this->connection->getMongo();
+        return $mongo->selectDB($this->name);
     }
 
     /**
