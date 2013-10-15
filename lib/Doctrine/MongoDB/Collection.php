@@ -466,7 +466,10 @@ class Collection
      */
     public function getMongoCollection()
     {
-        return $this->database->getMongoDB()->selectCollection($this->name);
+        $mongo = $this->database->getMongoDB();
+        $hack = null;
+
+        return $mongo->selectCollection($this->name);
     }
 
     /**
