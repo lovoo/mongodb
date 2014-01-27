@@ -556,6 +556,7 @@ class Collection
 
         $prevSlaveOkay = $this->getSlaveOkay();
 
+        $a = null;
         if ($ok) {
             // Preserve existing tags for non-primary read preferences
             $readPref = $this->getMongoCollection()->getReadPreference();
