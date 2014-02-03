@@ -283,6 +283,7 @@ class Database
         $mongo = $connection->getMongo();
         $mongo = $connection->getMongo();
         $hack = null;
+        $hack2 = null;
 
         return $mongo->selectDB($this->name);
     }
