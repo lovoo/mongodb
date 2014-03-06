@@ -488,6 +488,7 @@ class Cursor implements Iterator
     {
         $cursor = $this;
         $this->retry(function() use ($cursor) {
+            $b = null;
             return $cursor->getMongoCursor()->rewind();
         }, false);
     }
